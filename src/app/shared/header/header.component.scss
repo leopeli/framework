@@ -1,0 +1,25 @@
+
+
+.header {
+    display: flex;
+    align-items: center;
+    .header__logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: none;
+    }
+    .header__title {
+        font-size: 1rem;
+        margin-left: 2rem;
+        a {
+            display: flex;
+            align-items: center;
+            .material-icons {
+                font-size: 1rem;
+            }
+        }
+    }
+}

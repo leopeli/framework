@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    span {
+        display: flex;
+        align-items: center;
+    }
+    .material-icons {
+        color: red;
+        margin: 0 5px;
+        
+    }
+}
