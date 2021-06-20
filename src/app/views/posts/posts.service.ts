@@ -11,10 +11,10 @@ export class PostsService {
 
   baseUrl = "https://jsonplaceholder.typicode.com/posts";
 
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
 
   getPosts(): Observable<ModelPost[]> {
-    return this.http.get<ModelPost[]>(this.baseUrl)
+    return this._http.get<ModelPost[]>(this.baseUrl);
   }
 }
