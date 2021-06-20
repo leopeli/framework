@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AlbumsComponent } from './views/albums/albums.component';
+import { AlbumsModule } from './views/albums/albums.module';
 import { HomeComponent } from './views/home/home.component';
 import { HomeModule } from './views/home/home.module';
 import { PostsComponent } from './views/posts/posts.component';
@@ -20,6 +22,10 @@ const routes: Routes = [{
 {
   path: 'todos',
   component: TodosComponent
+},
+{
+  path: 'albums',
+  component: AlbumsComponent
 }];
 
 @NgModule({
@@ -28,6 +34,7 @@ const routes: Routes = [{
     HomeModule,
     PostsModule,
     TodosModule,
+    AlbumsModule,
 
   ],
   exports: [RouterModule]

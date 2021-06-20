@@ -8,6 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     HttpClientModule
   ],
-  declarations: [TodosComponent]
+  declarations: [TodosComponent],
 })
 export class TodosModule { }
