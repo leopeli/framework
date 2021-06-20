@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TodosComponent } from './todos.component';
+import { UsersComponent } from './users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 
@@ -8,8 +8,8 @@ import { MatCardModule } from '@angular/material/card';
   imports: [
     CommonModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
   ],
-  declarations: [TodosComponent],
+  declarations: [UsersComponent]
 })
-export class TodosModule { }
+export class UsersModule { }

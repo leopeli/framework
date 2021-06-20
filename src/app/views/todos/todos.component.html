@@ -1,3 +1,6 @@
-<p>
-  todos works!
-</p>
+<div class="todos-container">
+  <mat-card *ngFor="let todo of todos">
+    <mat-card-title>{{todo.title}}</mat-card-title>
+    <mat-card-content>{{todo.userId}}</mat-card-content>
+  </mat-card>
+</div>

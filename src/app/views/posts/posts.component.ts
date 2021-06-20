@@ -16,7 +16,6 @@ export class PostsComponent implements OnInit {
   ngOnInit() {
     this._postService.getPosts().subscribe(posts => {
       this.posts = posts;
-      console.log(this.posts)
     })
   }
 
