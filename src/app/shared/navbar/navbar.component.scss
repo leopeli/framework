@@ -1,0 +1,17 @@
+.container-sidenav {
+    padding: 1rem;
+    background-color: #fff;
+}
+
+.sidenave {
+    background-color: #673ab7;
+    width: 200px;
+    .nav-list {
+        a {
+            color: #fff;
+            .material-icons {
+                margin-right: 8px;
+            }
+        }
+    }
+}
