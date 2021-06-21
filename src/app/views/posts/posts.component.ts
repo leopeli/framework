@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/shared/header/header.service';
 import { ModelPost } from './post.model';
 import { PostsService } from './posts.service';
 
@@ -11,7 +12,16 @@ export class PostsComponent implements OnInit {
 
   posts: ModelPost[];
 
-  constructor(private _postService: PostsService) { }
+  constructor(
+    private _postService: PostsService,
+    private _headerService: HeaderService
+    ) { 
+      _headerService.headerData = {
+        title: 'Posts',
+        icon: 'notifications',
+        routerUrl: '/posts'
+      }
+    }
 
   ngOnInit() {
     this._postService.getPosts().subscribe(posts => {

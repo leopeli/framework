@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderService } from 'src/app/shared/header/header.service';
 import { ModelAlbums } from './albums.model';
 import { AlbumsService } from './albums.service';
 
@@ -11,7 +12,21 @@ export class AlbumsComponent implements OnInit {
 
   albums: ModelAlbums[];
 
-  constructor(private _albums: AlbumsService) { }
+  userIdColor = {
+    1 : '#f00',
+  }
+
+  constructor(
+    private _albums: AlbumsService, 
+    private _headerService: HeaderService
+    ){ 
+      _headerService.headerData = {
+        title: 'Albums',
+        icon: 'collections',
+        routerUrl: '/albuns'
+      }
+
+    }
 
   ngOnInit() {
     this._albums.getAlbums().subscribe(albums => {

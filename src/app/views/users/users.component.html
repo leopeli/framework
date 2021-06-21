@@ -1,7 +1,9 @@
 <div class="user-container">
   <mat-card class="user-card" *ngFor="let user of users">
-    <img class="user-card__avatar" mat-card-avatar src="assets/img/account_circle.svg">
-    <mat-card-title>{{user.name}}</mat-card-title>
+    <mat-card-header class="user__header">
+      <img class="user-card__avatar" mat-card-avatar src="assets/img/account_circle.svg">
+      <mat-card-title>{{user.name}}</mat-card-title>
+    </mat-card-header>
     <mat-card-content>
       <p>
         <i class="material-icons">
@@ -21,19 +23,7 @@
         </i>
         {{user.website}}
       </p>
-      <p>
-        <i class="material-icons">
-          home
-        </i>
-        Endereço:
-        </p>
-
-        <p>{{user.address.street}} - {{user.address.suite}}</p>
-        <p>{{user.address.city}} - zip Code: {{user.address.zipcode}}</p>
-        
-      {{user.email}}
-      {{user.phone}}
-      {{user.website}}
+    
     </mat-card-content>
   </mat-card>
 </div>
