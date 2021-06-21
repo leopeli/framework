@@ -1,6 +1,6 @@
 <div class="posts-container">
-  <mat-card *ngFor="let post of posts">
-    <mat-card-title>{{post.title}}</mat-card-title>
-    <mat-card-content>{{post.body}}</mat-card-content>
+  <mat-card class="posts" *ngFor="let post of posts">
+    <mat-card-title class="posts__title" >{{post.title}}</mat-card-title>
+    <mat-card-content class="posts__post">{{post.body}}</mat-card-content>
   </mat-card>
 </div>

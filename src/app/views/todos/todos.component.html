@@ -1,6 +1,17 @@
 <div class="todos-container">
-  <mat-card *ngFor="let todo of todos">
+  <mat-card [ngClass]="{'todo__completed': todo.completed === true, 'todo__not-started': todo.completed=== false}" *ngFor="let todo of todos">
     <mat-card-title>{{todo.title}}</mat-card-title>
-    <mat-card-content>{{todo.userId}}</mat-card-content>
+    <mat-card-footer class="todo__footer">
+      <i *ngIf="todo.completed else notCompleted" class="material-icons" matTooltip="Atividade Concluída"
+        matTooltipPosition="right">
+        done_all
+      </i>
+    </mat-card-footer>
   </mat-card>
 </div>
+
+<ng-template #notCompleted>
+  <i class="material-icons" matTooltip="Atividade não iniciada" matTooltipPosition="right">
+    not_started
+  </i>
+</ng-template>

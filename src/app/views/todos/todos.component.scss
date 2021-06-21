@@ -3,5 +3,17 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     gap: 1rem;
-
+    .todo__not-started {
+        background-color: #EF9A9A;
+    }
+    .todo__completed {
+        background-color: #80CBC4;
+    }
+    .todo__footer {
+     position: absolute;
+     bottom: 0;
+     right: 1rem;
+     transform: translateY(-50%);
+     padding: 0 1rem;   
+    }
 }
