@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { FooterComponent } from './footer/footer.component';
-import { RouterModule } from '@angular/router';
-import { MatIconModule } from '@angular/material';
-
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -18,15 +17,14 @@ import { MatIconModule } from '@angular/material';
     MatToolbarModule,
     MatIconModule
     
-
   ],
   declarations: [
-    HeaderComponent,
     FooterComponent,
+    HeaderComponent
   ],
   exports: [
-    HeaderComponent,
     FooterComponent,
+    HeaderComponent
   ]
 })
-export class SharedModule { }
+export class CoreModule { }

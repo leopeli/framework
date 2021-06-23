@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from 'src/app/shared/header/header.service';
+import { HeaderService } from 'src/app/core/header/header.service';
 import { ModelPost } from './post.model';
 import { PostsService } from './posts.service';
 
