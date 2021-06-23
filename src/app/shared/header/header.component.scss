@@ -1,32 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
 
+.sidenav-container {
+    height: 100%;
+}
+
+
+.logo {
+    font-family: 'Comfortaa', cursive;
+    color: #fff;
+}
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-    .header__logo {
-        display: flex;
-        align-items: center;
-        font-size: 1.5rem;
-        font-weight: 500;
-        text-decoration: none;
-    }
-    .header__title {
-        font-size: 1rem;
-        margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sidenav {
+    width: 200px;
+    background-color: #673ab7;
+    .navbar {
         a {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #333;
-            .material-icons {
-                font-size: 1rem;
-                margin-right: .5rem;
-            }
+            color: #fff;
         }
     }
+
+    .mat-toolbar {
+        background: inherit;
+        &.mat-primary {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+    }
+}
+
+.current-page {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #323232;
+
+    
 }

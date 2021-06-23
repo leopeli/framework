@@ -1,12 +1,40 @@
-<mat-toolbar class="header mat-elevation-z4">
-  <a class="header__logo">Leonidas</a>
-  <span class="header__title">
-    <a routerLink="{{ routeUrl }}">
-      <i class="material-icons">
-        {{ icon }}
-      </i>
-      {{ title }}
-    </a>
-  </span>
-  
-</mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="logo">Leonidas</mat-toolbar>
+
+    <mat-nav-list class="navbar">
+      <a mat-list-item routerLink="/">
+        <mat-icon>home</mat-icon>Home
+      </a>
+      <a mat-list-item routerLink="/todos">
+        <mat-icon>notifications</mat-icon>To-dos
+      </a>
+      <a mat-list-item routerLink="/posts">
+        <mat-icon>checklist</mat-icon>Posts
+      </a>
+      <a mat-list-item routerLink="/albums">
+        <mat-icon>collections</mat-icon>Albuns
+      </a>
+      <a mat-list-item routerLink="/users">
+        <mat-icon>perm_identity</mat-icon>Users
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <mat-toolbar class="header">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a routerLink="{{ routeUrl }}" class="current-page">
+        <i class="material-icons">
+          {{ icon }}
+        </i>
+        {{ title }}
+      </a>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

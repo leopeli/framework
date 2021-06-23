@@ -9,19 +9,21 @@
         <i class="material-icons">
           phone
         </i>
-        {{user.email}}
+        {{user.phone}}
       </p>
       <p>
         <i class="material-icons">
           email
         </i>
-        {{user.email}}
+        {{user.email | lowercase}}
       </p>
       <p>
         <i class="material-icons">
-          email
+          web
         </i>
-        {{user.website}}
+        <a href="{{user.website}}" target="_blank">
+          {{user.website}}
+        </a>
       </p>
     
     </mat-card-content>

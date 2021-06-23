@@ -1,12 +1,25 @@
 .todos-container {
     display: grid;
+    gap: 1rem;
+    padding: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
-    gap: 1rem;
     .todo__not-started {
-        background-color: #EF9A9A;
+        color: #EF9A9A;
     }
     .todo__completed {
-        background-color: #80CBC4;
+        color: #80CBC4;
+    }
+}
+
+@media (max-width: 1200px) {
+    .todos-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .todos-container{
+        grid-template-columns: 100%;
     }
 }

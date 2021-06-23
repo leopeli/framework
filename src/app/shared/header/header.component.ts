@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderService } from './header.service';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +11,18 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private _headerService: HeaderService) { }
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  .pipe(
+    map(result => result.matches),
+    shareReplay()
+  );
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private _headerService: HeaderService
+    ) { }
 
   ngOnInit() {
-    console.log(this._headerService.headerData.title)
   }
 
   get title(): string {
